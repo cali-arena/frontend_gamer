@@ -1,0 +1,387 @@
+.modalContent {
+  min-width: 600px;
+  max-width: 800px;
+  padding: 0;
+}
+
+.listViewContent {
+  min-width: 700px;
+  max-width: 1100px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 16px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trophyIcon {
+  font-size: 24px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  letter-spacing: -0.01em;
+  flex: 1;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.verTudoButton {
+  background: none;
+  border: none;
+  color: rgba(100, 150, 255, 0.9);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  text-transform: lowercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.verTudoButton:hover {
+  color: rgba(100, 150, 255, 1);
+  background-color: rgba(100, 150, 255, 0.1);
+}
+
+.verTudoButton:focus {
+  outline: 2px solid rgba(100, 150, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.editButton {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editButton:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.editButton:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.achievementsRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.achievementWrapper {
+  flex: 1;
+  min-width: 0;
+}
+
+.navButton {
+  background-color: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.navButton:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: #333333;
+  color: rgba(255, 255, 255, 1);
+}
+
+.navButton:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 16px;
+}
+
+.listTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  letter-spacing: -0.01em;
+  flex: 1;
+}
+
+.searchAndCompare {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1025px) {
+  .searchAndCompare {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 16px;
+  }
+  
+  .searchAndCompare > :first-child {
+    flex: 1;
+  }
+  
+  .searchAndCompare > :last-child {
+    flex: 0 0 auto;
+    min-width: 240px;
+  }
+}
+
+.achievementsList {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-right: -8px;
+}
+
+.achievementsList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.achievementsList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.achievementsList::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.achievementsList::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0 14px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 12px;
+}
+
+.dividerLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 48px 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.viewContainer {
+  position: relative;
+  min-height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.view-list {
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.view-detail {
+  animation: slideInDetail 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.view-compact {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInDetail {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loadingState p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .listViewContent {
+    max-width: 95vw;
+  }
+  
+  .view-detail {
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .listViewContent {
+    min-width: auto;
+    width: 100%;
+    max-height: 90vh;
+  }
+  
+  .viewContainer {
+    min-height: auto;
+  }
+  
+  .view-detail {
+    align-items: stretch;
+  }
+  
+  .header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+  
+  .listHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .headerRight {
+    width: auto;
+    justify-content: flex-end;
+  }
+  
+  .achievementsRow {
+    gap: 10px;
+  }
+  
+  .achievementWrapper {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .navButton {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .title,
+  .listTitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-wrap: wrap;
+  }
+  
+  .achievementsRow {
+    gap: 8px;
+  }
+  
+  .title,
+  .listTitle {
+    font-size: 16px;
+  }
+}
+

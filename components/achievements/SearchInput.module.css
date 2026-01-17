@@ -1,0 +1,121 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.icon {
+  position: absolute;
+  left: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 40px 12px 40px;
+  background-color: #252525;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.input:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: #2a2a2a;
+}
+
+.input:focus {
+  border-color: rgba(100, 150, 255, 0.6);
+  background-color: #2a2a2a;
+  box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.1);
+}
+
+.input:focus-visible {
+  outline: 2px solid rgba(100, 150, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.clearButton {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.clearButton:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.clearButton:focus {
+  outline: 2px solid rgba(100, 150, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.clearButton:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-bottom: 14px;
+  }
+  
+  .input {
+    padding: 11px 38px 11px 38px;
+    font-size: 13px;
+  }
+  
+  .icon {
+    left: 12px;
+    font-size: 15px;
+  }
+  
+  .clearButton {
+    right: 8px;
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input {
+    padding: 10px 36px 10px 36px;
+    font-size: 13px;
+  }
+  
+  .icon {
+    left: 12px;
+    font-size: 14px;
+  }
+}
+

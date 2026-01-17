@@ -1,0 +1,146 @@
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 12px;
+  background-color: #252525;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 0;
+  width: 100%;
+}
+
+.tile:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: #2a2a2a;
+  transform: translateY(-1px);
+}
+
+.tile:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.tile.selected {
+  border-color: rgba(100, 150, 255, 0.6);
+  background-color: #2a2a3a;
+  box-shadow: 0 0 0 2px rgba(100, 150, 255, 0.2), 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tile.compact {
+  padding: 12px 10px;
+  gap: 8px;
+}
+
+.iconContainer {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.tile.compact .iconContainer {
+  width: 44px;
+  height: 44px;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.icon.unlocked {
+  border-color: rgba(100, 200, 100, 0.5);
+  box-shadow: 0 0 8px rgba(100, 200, 100, 0.3);
+}
+
+.icon.locked {
+  opacity: 0.6;
+  filter: grayscale(0.5);
+}
+
+.iconPlaceholder {
+  font-size: 32px;
+}
+
+.tile.compact .iconPlaceholder {
+  font-size: 24px;
+}
+
+.checkmark {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  background-color: #4ade80;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border: 2px solid #1a1a1a;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  line-height: 1.3;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.tile.compact .name {
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.progress {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #4ade80, #22c55e);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+

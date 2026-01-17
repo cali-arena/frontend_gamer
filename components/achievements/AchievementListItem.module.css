@@ -1,0 +1,318 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #252525;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 12px;
+  gap: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.item:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.item:focus {
+  outline: 2px solid rgba(100, 150, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.item.selected {
+  border-color: rgba(100, 150, 255, 0.6);
+  background-color: #2a2a3a;
+  box-shadow: 
+    0 0 0 2px rgba(100, 150, 255, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item.locked {
+  opacity: 0.75;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.iconContainer {
+  position: relative;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.2s ease;
+}
+
+.iconUnlocked {
+  border-color: rgba(100, 200, 100, 0.6);
+  box-shadow: 0 0 0 1px rgba(100, 200, 100, 0.2), 0 2px 4px rgba(100, 200, 100, 0.15);
+}
+
+.iconLocked {
+  opacity: 0.65;
+  filter: grayscale(0.6);
+}
+
+.iconPlaceholder {
+  font-size: 28px;
+}
+
+.checkmark {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  background-color: #4ade80;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  border: 3px solid #252525;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 4px 0;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.description {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.comparison {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.indicator {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.userHas {
+  background-color: rgba(100, 200, 100, 0.2);
+  color: #4ade80;
+}
+
+.userNot {
+  background-color: rgba(255, 100, 100, 0.2);
+  color: #ff6b6b;
+}
+
+.friendHas {
+  background-color: rgba(100, 150, 255, 0.2);
+  color: #6496ff;
+}
+
+.friendNot {
+  background-color: rgba(150, 150, 150, 0.2);
+  color: #999999;
+}
+
+.rightSection {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.progressIndicators {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+
+.progressDot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dotPlaceholder {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+}
+
+.progressCount {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0 2px;
+  min-width: 20px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.noProgress {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  font-style: italic;
+  padding: 0 4px;
+}
+
+@media (max-width: 768px) {
+  .item {
+    padding: 14px;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .iconContainer {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .icon {
+    border-radius: 8px;
+  }
+  
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    top: -5px;
+    right: -5px;
+    border-width: 2px;
+  }
+  
+  .title {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+  
+  .description {
+    font-size: 11px;
+    -webkit-line-clamp: 2;
+  }
+  
+  .progressDot {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .dotPlaceholder {
+    font-size: 10px;
+  }
+  
+  .progressCount {
+    font-size: 11px;
+  }
+  
+  .leftSection {
+    gap: 12px;
+  }
+  
+  .rightSection {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    padding: 12px;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .iconContainer {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .checkmark {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    top: -4px;
+    right: -4px;
+  }
+  
+  .title {
+    font-size: 13px;
+  }
+  
+  .description {
+    font-size: 11px;
+    -webkit-line-clamp: 2;
+  }
+  
+  .progressDot {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .progressIndicators {
+    gap: 5px;
+  }
+  
+  .progressCount {
+    font-size: 10px;
+  }
+}
+
