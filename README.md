@@ -2,9 +2,17 @@
 
 Sistema completo de conquistas (achievements) desenvolvido para plataforma gamer, implementando páginas 1-4 do design Figma com foco em interações e micro-interações.
 
-## 🚀 Demo
+## 🚀 Demo Online
 
-**Acesse o projeto em:** [https://github.com/cali-arena/frontend_gamer](https://github.com/cali-arena/frontend_gamer)
+**🔗 Link Temporário (Deploy Rápido):**
+1. Acesse: https://vercel.com/new
+2. Conecte o repositório: `cali-arena/frontend_gamer`
+3. Clique em "Deploy"
+4. Receba seu link em 2 minutos!
+
+**📦 Repositório GitHub:** [https://github.com/cali-arena/frontend_gamer](https://github.com/cali-arena/frontend_gamer)
+
+**📖 Guia Completo:** Veja `DEPLOY_RAPIDO.md` para instruções detalhadas
 
 ## 📋 Sobre o Projeto
 
